@@ -1,0 +1,220 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Elvis Munene - CV</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        line-height: 1.6;
+        margin: 0;
+        padding: 2rem;
+        color: #333;
+        background: #fff;
+      }
+      .cv-header {
+        text-align: center;
+        margin-bottom: 2rem;
+        border-bottom: 2px solid #00ff88;
+        padding-bottom: 1rem;
+      }
+      .cv-header h1 {
+        margin: 0;
+        color: #00ff88;
+      }
+      .cv-header p {
+        margin: 0.5rem 0 0;
+        color: #666;
+      }
+      .section {
+        margin-bottom: 2rem;
+      }
+      .section h2 {
+        color: #00ff88;
+        border-bottom: 1px solid #eee;
+        padding-bottom: 0.5rem;
+      }
+      .contact-info {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 1rem;
+        margin-bottom: 1rem;
+      }
+      .info-item {
+        margin-bottom: 0.5rem;
+      }
+      .info-item strong {
+        color: #00ff88;
+      }
+      .experience-item,
+      .education-item {
+        margin-bottom: 1rem;
+      }
+      .experience-item h3,
+      .education-item h3 {
+        margin: 0 0 0.25rem;
+        color: #00ff88;
+      }
+      .experience-item .company,
+      .education-item .institution {
+        font-weight: bold;
+      }
+      .experience-item .date,
+      .education-item .date {
+        color: #666;
+        font-size: 0.9rem;
+      }
+      .skills-list {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 0.5rem;
+      }
+      .skills-list li {
+        margin: 0;
+      }
+      .print-only {
+        display: none;
+      }
+      @media print {
+        .print-only {
+          display: block;
+        }
+        body {
+          padding: 0;
+        }
+        .cv-header {
+          page-break-after: avoid;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="cv-header">
+      <h1>Elvis Munene</h1>
+      <p>Frontend Developer | Web Designer</p>
+      <p>elvismunene2002@gmail.com | +254 796 000000 | Nairobi, Kenya</p>
+    </div>
+
+    <div class="section">
+      <h2>Professional Summary</h2>
+      <p>
+        Passionate frontend developer with experience in creating modern,
+        responsive web applications. Skilled in HTML5, CSS3, JavaScript, React,
+        and Vue.js. Strong problem-solving abilities and a keen eye for design.
+      </p>
+    </div>
+
+    <div class="section">
+      <h2>Experience</h2>
+      <div class="experience-item">
+        <h3>Frontend Developer Intern</h3>
+        <p class="company">Tech Solutions Ltd</p>
+        <p class="date">Summer 2023 - Present</p>
+        <ul>
+          <li>
+            Developed and maintained web applications using React and Node.js
+          </li>
+          <li>Collaborated with design team to implement responsive layouts</li>
+          <li>Optimized application performance and improved loading times</li>
+          <li>Worked on bug fixing and feature enhancements</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="section">
+      <h2>Education</h2>
+      <div class="education-item">
+        <h3>Bachelor's in Computer Science</h3>
+        <p class="institution">Zetech University, Kenya</p>
+        <p class="date">Expected Graduation: 2027</p>
+      </div>
+    </div>
+
+    <div class="section">
+      <h2>Skills</h2>
+      <h3>Technical Skills</h3>
+      <ul class="skills-list">
+        <li>HTML5</li>
+        <li>CSS3</li>
+        <li>JavaScript</li>
+        <li>React</li>
+        <li>Vue.js</li>
+        <li>TypeScript</li>
+        <li>Node.js</li>
+        <li>Express.js</li>
+        <li>MongoDB</li>
+        <li>Tailwind CSS</li>
+        <li>Sass/Scss</li>
+        <li>Git & GitHub</li>
+        <li>Figma</li>
+        <li>Responsive Design</li>
+        <li>RESTful APIs</li>
+      </ul>
+
+      <h3>Soft Skills</h3>
+      <ul class="skills-list">
+        <li>Teamwork</li>
+        <li>Communication</li>
+        <li>Problem Solving</li>
+        <li>Time Management</li>
+        <li>Adaptability</li>
+        <li>Continuous Learning</li>
+      </ul>
+    </div>
+
+    <div class="section">
+      <h2>Projects</h2>
+      <div class="experience-item">
+        <h3>E-Commerce Platform</h3>
+        <p>
+          Full-featured online store with product listings, cart functionality,
+          and secure checkout. Built with React and Node.js.
+        </p>
+      </div>
+      <div class="experience-item">
+        <h3>Task Management App</h3>
+        <p>
+          Productivity application for organizing tasks with drag-and-drop
+          functionality, due dates, and priority levels.
+        </p>
+      </div>
+      <div class="experience-item">
+        <h3>Weather Dashboard</h3>
+        <p>
+          Real-time weather application displaying current conditions,
+          forecasts, and weather alerts for multiple locations.
+        </p>
+      </div>
+    </div>
+
+    <div class="section">
+      <h2>References</h2>
+      <p>Available upon request</p>
+    </div>
+
+    <div
+      class="print-only"
+      style="
+        text-align: center;
+        margin-top: 2rem;
+        color: #666;
+        font-size: 0.8rem;
+      "
+    >
+      <p>Generated: <span id="date"></span></p>
+      <p>Elvis Munene CV - Confidential</p>
+    </div>
+
+    <script>
+      // Add current date for print
+      document.getElementById("date").textContent =
+        new Date().toLocaleDateString();
+
+      // Auto-download when accessed directly
+      if (window.location.pathname.includes("Elvis_CV.html")) {
+        // This allows the file to be downloaded
+      }
+    </script>
+  </body>
+</html>
